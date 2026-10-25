@@ -2,6 +2,8 @@
 
 Assignment for **Advanced Deep Learning: Recurrent Neural Network (RNN) & LSTM** (slide 59).
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AdityaIKO/advanced-deep-learning-RNN/blob/main/mt_seq2seq_assignment.ipynb)  (step-by-step instructions: [`COLAB_LINK.txt`](COLAB_LINK.txt))
+
 > **Assignment (Machine Translation)**
 > * Use the DE-EN News Commentary parallel corpus from [WMT13](http://www.statmt.org/wmt13/translation-task.html#download)
 > * Use an Encoder-Decoder (Seq2Seq) to build the MT system
@@ -72,7 +74,8 @@ Assignment for **Advanced Deep Learning: Recurrent Neural Network (RNN) & LSTM**
    PyTorch.
 2. The notebook downloads `training-parallel-nc-v8.tgz` from statmt.org. If that is blocked, put
    `news-commentary-v8.de-en.de` and `news-commentary-v8.de-en.en` in a `data/` folder next to the notebook.
-3. Run all cells. Set `FAST = True` in the configuration cell for a quick CPU run.
+3. Run all cells. `PROFILE` in the configuration cell selects the size: `"gpu"` (default), `"cpu"` (smaller model on
+   all data, about 1.5 hours per model on 4 CPU cores) or `"fast"` (a quick sanity check).
    Results are written to `runs/` (`results.json`, `summary.csv`, plots) after each model, so an interrupted run
    resumes where it stopped.
 

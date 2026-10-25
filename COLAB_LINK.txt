@@ -1,0 +1,25 @@
+Open the assignment notebook in Google Colab
+============================================
+
+https://colab.research.google.com/github/AdityaIKO/advanced-deep-learning-RNN/blob/main/mt_seq2seq_assignment.ipynb
+
+
+Steps
+-----
+1. Open the link above (sign in with a Google account).
+2. Menu: Runtime -> Change runtime type -> Hardware accelerator: T4 GPU -> Save.
+3. Leave PROFILE = "gpu" in the configuration cell (full size: 2 layers x 512 units, 30k vocabulary, 15 epochs).
+4. Menu: Runtime -> Run all.
+   - The notebook downloads the WMT13 News Commentary v8 corpus from statmt.org by itself.
+   - If the download fails: click the folder icon on the left, create a folder named "data", and upload
+     news-commentary-v8.de-en.de and news-commentary-v8.de-en.en into it. Then run all cells again.
+5. Expected time on a T4: roughly 10-25 minutes per model, about 1 hour for RNN + LSTM + GRU.
+   Keep the browser tab open; Colab may disconnect an idle session.
+6. When it finishes, save the results:
+   - File -> Download -> Download .ipynb   (the executed notebook with all outputs and plots)
+   - In the file panel, right-click the "runs" folder files (results.json, summary.csv, convergence.png,
+     comparison.png, vanishing_gradient.png) -> Download.
+   To keep a copy in this repository: File -> Save a copy in GitHub.
+
+If Colab disconnects mid-run: reconnect and Run all again. Models that already finished are reloaded
+from runs/ (as long as the runtime was not reset), so only the unfinished ones are retrained.
