@@ -1,0 +1,7 @@
+# corpus (download from WMT13, see README)
+data/
+# training outputs / checkpoints
+runs/
+*.pt
+.ipynb_checkpoints/
+__pycache__/
